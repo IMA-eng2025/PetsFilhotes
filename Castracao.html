@@ -1,0 +1,50 @@
+<!-- castracao.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Castração - PetsFilhotes</title>
+  <link rel="stylesheet" href="../css/estilo.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>PetsFilhotes</h1>
+      <p>Clínica Popular</p>
+    </div>
+  </header>
+
+  <section class="formulario">
+    <div class="container">
+      <h2>Agende a castração do seu pet</h2>
+      <form id="form-castracao">
+        <label>Nome do cachorro:
+          <input type="text" id="nome" required>
+        </label>
+        <label>Gênero:
+          <select id="genero" required>
+            <option value="">Selecione</option>
+            <option value="macho">Macho</option>
+            <option value="femea">Fêmea</option>
+          </select>
+        </label>
+        <label>Raça:
+          <input type="text" id="raca" required>
+        </label>
+        <label>Tamanho (cm):
+          <input type="number" id="tamanho" required>
+        </label>
+        <label>Peso (kg):
+          <input type="number" step="0.01" id="peso" required>
+        </label>
+        <button type="submit">Calcular Valor</button>
+      </form>
+
+      <div id="resultado"></div>
+    </div>
+  </section>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

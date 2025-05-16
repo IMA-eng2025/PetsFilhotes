@@ -1,0 +1,31 @@
+// js/script.js
+
+document.getElementById("form-castracao")?.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const genero = document.getElementById("genero").value;
+  const raca = document.getElementById("raca").value;
+  const tamanho = parseFloat(document.getElementById("tamanho").value);
+  const peso = parseFloat(document.getElementById("peso").value);
+
+  // Exemplo de lógica simples para calcular valor
+  let valor = 150;
+
+  if (genero === "femea") valor += 50;
+  if (peso > 15) valor += 30;
+  if (raca.toLowerCase() === "poodle") valor += 20;
+
+  // Resultado
+  const resultadoDiv = document.getElementById("resultado");
+  resultadoDiv.innerHTML = `
+    <h3>Resultado:</h3>
+    <p><strong>Nome:</strong> ${nome}</p>
+    <p><strong>Raça:</strong> ${raca}</p>
+    <p><strong>Gênero:</strong> ${genero}</p>
+    <p><strong>Tamanho:</strong> ${tamanho} cm</p>
+    <p><strong>Peso:</strong> ${peso} kg</p>
+    <p><strong>Valor:</strong> R$${valor.toFixed(2)}</p>
+    <p><strong>Dica:</strong> Raças pequenas como Poodles precisam de atenção especial após a cirurgia.</p>
+  `;
+});
